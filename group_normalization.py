@@ -36,7 +36,7 @@ def GroupNormalization(x, phase_train, groups=32, decay=0.99, scope="gn"):
 	- https://github.com/shaohua0116/Group-Normalization-Tensorflow/blob/master/ops.py
 	"""
 	with tf.variable_scope(scope):
-		# normalize
+	    # normalize
 	    # tranpose: [bs, h, w, c] to [bs, c, h, w] following the paper
 	    esp = 1e-5
 	    G = groups
@@ -51,7 +51,7 @@ def GroupNormalization(x, phase_train, groups=32, decay=0.99, scope="gn"):
 	    gamma = tf.reshape(gamma, [1, C, 1, 1])
 	    beta = tf.reshape(beta, [1, C, 1, 1])
 
-		# compute group-channel mean & variance
+	    # compute group-channel mean & variance
 	    gn_mean, gn_var = tf.nn.moments(x, [2, 3, 4], keep_dims=True, name="moments")
 
 	    # ema ops to record global mean & var update
