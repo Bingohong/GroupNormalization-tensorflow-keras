@@ -1,4 +1,4 @@
-# GroupNormalization-tensorflow
+# GroupNormalization-tensorflow/keras
 a Tensorflow implementation of Group Normalizations  proposed in the paper [Group Normalization](https://arxiv.org/abs/1803.08494) by Wu et al.
 
 # Description
